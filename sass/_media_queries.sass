@@ -1,0 +1,19 @@
+$tablet-width: 768px
+$desktop-width: 992px
+$full-screen-width: 1200px
+
+@mixin phone
+    @media (max-width: #{$tablet-width - 1px})
+        @content
+
+@mixin tablet
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+        @content
+
+@mixin desktop
+    @media (min-width: #{$desktop-width}) and (max-width: #{$full-screen-width - 1px})
+        @content
+
+@mixin full-screen
+    @media (min-width: #{$full-screen-width})
+        @content

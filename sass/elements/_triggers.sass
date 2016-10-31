@@ -1,0 +1,52 @@
+@import "../mixins"
+button
+    &.toggle
+        -webkit-appearance: none
+        &:hover
+            outline: none
+.toggle
+    background-color: #4bc076
+    border: 1px solid #4fbe78
+    border-radius: 11px
+    cursor: pointer
+    display: inline-block
+    @include helvetica_normal(9px, white, 21px)
+    font-family:  Helvetica, Arial, sans-serif
+    height: 22px
+    margin-top: 5px
+    position: relative
+    text-transform: uppercase
+    vertical-align: top
+    width: 49px
+
+    &.animated
+        &:after
+            @include transition(right 0.2s)
+
+    &:before
+        content: 'on'
+        display: block
+        position: absolute
+        left: 6px
+        top: 0
+    &:after
+        content: ''
+        background: white
+        border-radius: 50%
+        display: block
+        height: 18px
+        position: absolute
+        right: 2px
+        top: 1px
+        width: 18px
+    &.off
+        background-color: #ed6f67
+        border-color: #ed6f67
+        &:before
+            content: 'off'
+            top: 0
+            right: 6px
+            text-transform: uppercase
+            text-align: right
+        &:after
+            right: 26px

@@ -1,0 +1,34 @@
+@import "../colors"
+@import "../media_queries"
+// React Select
+$select-item-color: #006dd5
+$select-text-color: $btn-text
+$select-link-hover-color: #006dd5
+$select-option-color: $btn-text
+$select-option-focused-bg: $snow
+$select-input-border-color: #dee4ec
+$select-arrow-color-hover: #999
+$select-input-border-focus: #a7b8d1
+$select-input-placeholder: $select-input-placeholder
+$select-padding-vertical: 4px
+$select-input-height: 38px
+
+@import "../../../../node_modules/react-select/scss/default"
+.Select
+    font-weight: 500
+
+.Select-input > input
+    height: auto
+.Select-arrow-zone
+    padding-top: 1px
+
+.is-focused:not(.is-open)
+    > .Select-control
+        border-color: #66afe9
+        @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6))
+.Select-arrow
+    border-width: 4px 4px 2.5px
+
+
+
+

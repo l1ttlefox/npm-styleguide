@@ -1,0 +1,33 @@
+// Transition
+@mixin transition($transition...)
+    transition: $transition
+    -webkit-transition: $transition
+
+@mixin transition-property($property...)
+    transition-property: $property
+
+@mixin transition-duration($duration...)
+    transition-property: $duration
+    -webkit-transition-property: $duration
+
+@mixin transition-timing-function($timing...)
+    transition-timing-function: $timing
+    -webkit-transition-timing-function: $timing
+
+@mixin transition-delay($delay...)
+    transition-delay: $delay
+    -webkit-transition-delay: $delay
+
+
+// Rotate
+@mixin rotate($rotate)
+    /* Safari */
+    transform: rotate($rotate)
+    -webkit-transform: rotate($rotate)
+
+// BoxShadow
+
+@mixin box-shadow($property...)
+    box-shadow: $property
+    -webkit-box-shadow: $property
+

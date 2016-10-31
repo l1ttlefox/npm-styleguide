@@ -1,0 +1,105 @@
+@import "../colors"
+.btn-default,
+.btn-primary,
+.orange-button,
+.round-button,
+.blue-button
+    text-shadow: none
+    box-shadow: none
+    background-image: none
+    border: 1px solid
+    @include transition(background-color .5s)
+    min-width: 74px
+    outline: none
+    &:active
+        outline: none
+        text-shadow: none
+        box-shadow: none
+        border-color: #d9dde0
+        background: white none
+    &:hover,
+    &:focus
+        border-color: #d9dde0
+        background-color: white
+        outline: none
+        &:active
+            outline: none
+            text-shadow: none
+            box-shadow: none
+            border-color: #d9dde0
+            background: white none
+
+.btn-default,
+.btn-primary,
+.orange-button
+    border-radius: 3px 4px 4px 3px
+.btn-default
+    background-color: white
+    border-color: #d9dde0
+    @include helvetica_normal(14px, $btn-text, 21px)
+
+.btn-primary
+    background-color: $cyan
+    border-color: $cyan
+    @include helvetica_normal(14px, white, 21px)
+    &:hover,
+    &:focus
+        background-color: #0267bf
+        border-color: #0267bf
+        color: white
+
+.blue-button
+    @include helvetica_normal(14px, white, 21px)
+    background-color: $lightBlue
+    border-color: $lightBlue
+    &:hover,
+    &:focus
+        background-color: #1c8aea
+        border-color: #1c8aea
+        color: white
+
+.orange-button
+    background-color: $orange
+    border-color: $orange
+    @include helvetica_normal(14px, white, 21px)
+    &:hover,
+    &:focus
+        background-color: #efac3e
+        border-color: #efac3e
+        color: white
+
+.round-button,
+.round-orange-button
+    border-radius: 50px
+    padding: 6px 21px 5px
+
+.round-button
+    background-color: white
+    border-color: #d9dde0
+.round-orange-button
+    color: white
+    background-color: $orange
+    border-color: $orange
+    &:hover,
+    &:focus
+        background-color: #efac3e
+        border-color: #efac3e
+        color: white
+
+.btn-lg
+    padding: 11px 19px
+    &.btn-primary
+        @include helvetica_bold(16px, white, 21px)
+
+.btn-xs
+    padding: 4px 10px 3px
+    &.btn-primary
+        @include helvetica_light(13px, white, 21px)
+
+.btn-toolbar
+    margin-bottom: 15px
+.btn-toolbar-sizes
+    .btn-toolbar
+        .btn
+            float: none
+            vertical-align: bottom

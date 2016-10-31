@@ -1,0 +1,203 @@
+@import "../colors"
+@import "selects"
+@import "../mixins"
+.dropdown
+    .drop-down-button
+        border-color: #d6dadb
+        padding: 8px 12px 7px
+        &:focus
+            &:active
+                border-color: #d6dadb
+        &+.dropdown-toggle
+            padding: 8px 12px 7px
+            min-width: 34px
+            outline: none
+            text-shadow: none
+            box-shadow: none
+            &:focus
+                &:active
+                    border-color: #d6dadb
+    span
+        &.caret
+            color: $select-arrow-color-hover
+
+.open
+    &>.dropdown-toggle
+        &.btn-degault
+            text-shadow: none
+            box-shadow: none
+            &:focus
+                border-color: #d6dadb
+                &:active
+                    border-color: #d6dadb
+
+
+.dropdown-menu
+    border-color: #d6dadb
+    li
+        cursor: pointer
+        padding: 4px 10px
+        @include helvetica_normal(14px, $btn-text, 18px)
+        &:hover,
+        &:active,
+        &:focus
+            background-color: $select-option-focused-bg
+            outline: none
+        &.divider
+            padding: 0
+        &>a
+            @include helvetica_normal(14px, $btn-text, 18px)
+            background-image: none
+            &:focus,
+            &:hover
+                background: $select-option-focused-bg none
+                color: $btn-text
+    &>.active
+        background-color: $select-option-focused-bg
+        &>a
+            background: $select-option-focused-bg none
+            @include helvetica_normal(14px, $btn-text, 18px)
+            &:focus,
+            &:hover
+                background: $select-option-focused-bg none
+                color: $btn-text
+
+
+//custom styling for styleguide page
+.select-demo-block
+    margin-bottom: 20px
+
+.drop-down-icon
+    background: white none
+    border: none
+    color: #969ba8
+    text-rendering: auto
+    font: normal normal normal 17px/1 FontAwesome
+    min-height: 30px
+    min-width: 55px
+    .span
+        &.caret
+            position: absolute
+            right: 11px
+    &:hover,
+    &:focus,
+    &:active
+        background: white none
+        border: none
+        color: #969ba8
+        &:focus
+            background: white none
+            border: none
+            color: #969ba8
+    &:before
+        position: absolute
+        left: 4px
+        top: 6px
+
+.open
+    &>.dropdown-toggle
+        &.btn-default
+            &.drop-down-icon
+                &:focus,
+                &:hover
+                    background: none
+                    border: none
+                    box-shadow: none
+.open
+    &.dropdown
+        &.btn-group
+            @include phone
+                display: block
+                &>.dropdown-toggle
+                    &.btn-default,
+                    &.drop-down-icon,
+                    &.btn
+                        float: none
+                        border-color: #d9dde0
+                        &:focus,
+                        &:hover
+                            border-color: #d9dde0
+                .dropdown-menu
+                    position: static
+                    width: 100%
+                    float: none
+.open
+    &>.dropdown-toggle
+        &.btn-default,
+        &.drop-down-icon,
+        &.btn
+            float: none
+            border-color: #d9dde0
+            background-color: white
+            &:focus,
+            &:hover
+                border-color: #d9dde0
+                background-color: white
+
+.menu--user
+    .dropdown
+        &.btn-group
+            margin-left: 15px
+            @include phone
+                margin-left: 0
+                display: block
+                &>.dropdown-toggle
+                    &.btn-default,
+                    &.drop-down-icon,
+                    &.btn
+                        float: none
+                        display: block
+                        width: 100%
+                        min-height: 30px
+                        margin-bottom: 5px
+                .dropdown-menu
+                    position: static
+                    width: 100%
+                    float: none
+        span
+            &.caret
+                position: absolute
+                right: 11px
+
+    @include phone
+        .dropdown
+            &.btn-group
+                display: block
+                float: none
+.drop-down-user
+    margin-left: 15px
+    float: right
+    @include phone
+        float: none
+        position: relative
+        .open
+            & > .drop-down-icon
+                &.dropdown-toggle,
+                &.btn,
+                &.btn-default
+                    background: none
+                    &:hover
+                        background: none
+        .drop-down-icon
+            &.dropdown-toggle,
+            &.btn,
+            &.btn-default
+                background: none
+    .menu--user-icon
+        overflow: hidden
+        @include phone
+            position: absolute
+        border-radius: 100%
+        width: 32px
+        height: 32px
+        float: left
+        img
+            width: 100%
+    .drop-down-icon
+        &.dropdown-toggle,
+        &.btn,
+        &.btn-default
+            min-width: initial
+
+
+

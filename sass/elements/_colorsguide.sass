@@ -1,0 +1,27 @@
+.color-group
+    margin-bottom: 30px
+    &>p
+        @include helvetica_normal(18px, #65696c, 21px)
+        margin-bottom: 20px
+
+
+.color-box
+    float: left
+    display: inline-block
+    margin-right: 25px
+    width: 165px
+    text-align: center
+    .color-pallet
+        background-color: white
+        border-radius: 3px
+        @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.35))
+        .color-space
+            border-radius: 3px 3px 0 0
+            padding: 28px
+        .color-hex
+            padding: 15px
+            span
+                @include helvetica_normal(14px, #686767, 21px)
+    .color-name
+        padding: 15px
+        @include helvetica_light(13px, #999, 18px)

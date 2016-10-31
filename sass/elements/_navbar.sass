@@ -1,0 +1,147 @@
+@import "../fonts"
+@import "../media_queries"
+@import "../mixins"
+
+.menu-minified
+    .navbar
+        .navbar-header
+            @include tablet
+                width: 80px
+            @include desktop
+                width: 80px
+            @include full-screen
+                width: 80px
+        .navbar-collapse
+            @include tablet
+                .vertical-side-menu
+                    width: 80px
+            @include desktop
+                .vertical-side-menu
+                    width: 80px
+            @include full-screen
+                .vertical-side-menu
+                    width: 80px
+        .menu-minified-button
+            button
+                transform: rotate(180deg)
+
+
+.navbar
+    box-shadow: none
+    &.navbar-default
+        border: none
+        border-bottom: 1px solid #e4e8eb
+        background: none white
+    .navbar-header
+        text-align: center
+        @include transition(0.25s)
+        background-color: #4c515d
+        padding: 0px 15px
+        text-align: center
+        line-height: 0
+        @include phone
+            text-align: left
+        .navbar-brand
+            float: none
+            display: inline-block
+            padding: 5px
+            width: 50px
+            img
+                max-width: 100%
+                max-height: 100%
+        @include tablet
+            width: 220px
+            margin-left: -15px
+        @include desktop
+            width: 220px
+            margin-left: -15px
+        @include full-screen
+            width: 220px
+            margin-left: -15px
+    .navbar-collapse
+        @include phone
+            background-color: #4c515d
+        .menu-minified-button
+            display: inline-block
+            height: 100%
+            padding: 8px 20px
+            float: left
+            button
+                border: none
+                background: white url("/public/images/menu-trigger.png") no-repeat center
+                padding: 6px 12px
+            @include phone
+                display: none
+        .menu--user
+            padding-top: 5px
+            float: right
+            display: inline-block
+            height: inherit
+            @include phone
+                float: none
+                display: block
+                margin-bottom: 10px
+        .vertical-side-menu
+            overflow-x: hidden
+            @include transition(0.25s)
+            background-color: #4c515d
+            li
+                a
+                    display: block
+                    @include helvetica_light(16px, #cfd2d9, 42px)
+                    border-bottom: 1px solid transparent
+                    padding: 11px 15px 10px 80px
+                    position: relative
+                    @include transition(background-color, .5s)
+                    &.active
+                        border-bottom: 1px solid #444750
+                        background-color: #383e49
+                        .fa
+                            color: #f7b64b
+                    &:hover
+                        border-bottom: 1px solid #444750
+                        background-color: #383e49
+                        .fa
+                            color: #f7b64b
+                    .fa
+                        font-size: 15px
+                        font-weight: 400
+                        line-height: 23px
+                        position: absolute
+                        top: 19px
+                        left: 30px
+            &:after
+                content: ''
+                position: absolute
+                width: 100%
+                height: 1px
+                top: 0
+                left: 0
+                background-color: #444750
+            @include desktop
+                position: fixed
+                height: 100vh!important
+                width: 220px
+                max-height: 100vh
+                top: 50px
+                left: 0
+                li
+                    float: none
+            @include full-screen
+                position: fixed
+                height: 100vh!important
+                width: 220px
+                max-height: 100vh
+                top: 50px
+                left: 0
+                li
+                    float: none
+            @include tablet
+                position: fixed
+                height: 100vh!important
+                max-height: 100vh
+                width: 220px
+                top: 50px
+                left: 0
+                li
+                    float: none

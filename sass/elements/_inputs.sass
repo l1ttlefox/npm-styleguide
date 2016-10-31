@@ -1,0 +1,48 @@
+@import "../mixins"
+@import "../colors"
+// Placeholder
+@mixin placeholder($color, $font-size, $line-height)
+    &::-webkit-input-placeholder
+        color: $color
+        font-size: $font-size
+        line-height: $line-height
+    &:-moz-placeholder
+        line-height: $line-height
+        font-size: $font-size
+            color: $color
+    &::-moz-placeholder
+        line-height: $line-height
+        font-size: $font-size
+            color: $color
+    &:-ms-input-placeholder
+        color: $color
+        font-size: $font-size
+        line-height: $line-height
+
+input,
+textarea
+    &.form-control
+        background-color: white
+        border: 1px solid #d6dadb
+        @include box-shadow(inset 0 1px 1px rgba(0, 1, 1, 0.15))
+        min-height: 38px
+        padding: 10px 15px
+        @include placeholder($select-input-placeholder, 14px, 21px)
+
+.control-label
+    @include helvetica_normal(16px, #65696c, 21px)
+    margin-bottom: 15px
+
+.form-control
+    &.input-focus-demo
+        border-color: #66afe9
+        outline: 0
+        @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6))
+.has-error
+    .help-block
+        @include helvetica_light(12px, #ed6f67, 18px)
+    .control-label
+        color: #65696c
+    .form-control
+        @include box-shadow(inset 0 1px 1px rgba(0, 1, 1, 0.15))
+        border: 1px solid #ed6f67
